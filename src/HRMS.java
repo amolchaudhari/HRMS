@@ -27,7 +27,7 @@ public class HRMS {
 		System.setProperty("webdriver.firefox.bin", "C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
 		fp.setPreference("browser.download.folderList", 2);
 		fp.setPreference("browser.download.manager.showWhenStarting", false);
-		fp.setPreference("browser.download.dir", "C:\\software");
+		fp.setPreference("browser.download.dir", "C:/software/");
 		fp.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/vnd.ms-excel");
 
 		driver = new FirefoxDriver();
