@@ -1,5 +1,6 @@
 import static org.junit.Assert.fail;
 
+import java.io.File;
 import java.text.MessageFormat;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +11,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.Select;
@@ -23,13 +25,15 @@ public class HRMS {
 	@Before
 	public void setUp() throws Exception {
 		// System.setProperty("webdriver.firefox.bin", "C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
+		File pathToBinary = new File("C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
+		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 		FirefoxProfile fp = new FirefoxProfile();
 		fp.setPreference("browser.download.folderList", 2);
 		fp.setPreference("browser.download.manager.showWhenStarting", false);
 		fp.setPreference("browser.download.dir", "C:\\Users\\karan.gusani\\Downloads");
 		fp.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/vnd.ms-excel");
 
-		driver = new FirefoxDriver();
+		driver = new FirefoxDriver(ffBinary, fp);
 		baseUrl = "https://myhris.adrenalin.in/";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
