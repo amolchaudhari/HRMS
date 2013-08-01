@@ -34,7 +34,7 @@
 	<target name="junit" depends="compile">
 		<junit printsummary="on" fork="true" haltonfailure="yes">
 			<classpath refid="junit.class.path" />
-			<formatter type="plain" usefile="false" />
+			<formatter type="xml" />
 			<batchtest todir="${test.report.dir}">
 				<fileset dir="${src.dir}">
 					<include name="HRMS.java" />
