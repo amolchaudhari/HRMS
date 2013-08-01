@@ -26,7 +26,7 @@ public class HRMS {
 		FirefoxProfile fp = new FirefoxProfile();
 		fp.setPreference("browser.download.folderList", 2);
 		fp.setPreference("browser.download.manager.showWhenStarting", false);
-		fp.setPreference("browser.download.dir", "C:/software/");
+		fp.setPreference("browser.download.dir", "C:\\Users\\karan.gusani\\Downloads");
 		fp.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/vnd.ms-excel");
 
 		driver = new FirefoxDriver();
