@@ -22,7 +22,7 @@ public class HRMS {
 
 	@Before
 	public void setUp() throws Exception {
-		// System.setProperty("webdriver.firefox.bin", "C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
+		System.setProperty("webdriver.firefox.bin", "C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
 		FirefoxProfile fp = new FirefoxProfile();
 		fp.setPreference("browser.download.folderList", 2);
 		fp.setPreference("browser.download.manager.showWhenStarting", false);
