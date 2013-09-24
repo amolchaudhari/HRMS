@@ -2,19 +2,11 @@ import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.text.MessageFormat;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxBinary;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.support.ui.Select;
 
 public class HRMS {
 	private WebDriver driver;
@@ -22,7 +14,6 @@ public class HRMS {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
-	@Before
 	public void setUp() throws Exception {
 		// System.setProperty("webdriver.firefox.bin", "C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
 		File pathToBinary = new File("C:/Program Files (x86)/Mozilla Firefox/firefox.exe");
